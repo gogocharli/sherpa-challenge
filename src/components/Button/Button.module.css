@@ -1,5 +1,5 @@
 .base {
-  display: inline-flex;
+  display: inline-block;
   cursor: pointer;
   border: 0;
   border-radius: 0.25rem;
@@ -8,6 +8,7 @@
   background: none;
   transition: background-color var(--timing-fade) var(--easing-fade),
     color var(--timing-fade) var(--easing-fade);
+  max-width: fit-content;
 }
 
 .primary {

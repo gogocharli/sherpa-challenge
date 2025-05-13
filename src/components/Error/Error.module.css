@@ -1,0 +1,12 @@
+.base {
+  color: var(--color-red-55);
+  display: inline-flex;
+  gap: 0.4em;
+  font-size: var(--font-size-caption);
+
+  align-items: center;
+}
+
+.base svg path {
+  fill: var(--color-red-55);
+}

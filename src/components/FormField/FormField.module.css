@@ -1,0 +1,10 @@
+.description {
+  font-size: var(--font-size-caption);
+  max-width: 40ch;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
