@@ -1,0 +1,70 @@
+.base {
+  display: inline-flex;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  line-height: 1;
+  background: none;
+  transition: background-color var(--timing-fade) var(--easing-fade),
+    color var(--timing-fade) var(--easing-fade);
+}
+
+.primary {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+.primary:hover {
+  background-color: var(--color-blue-55);
+}
+
+.outline {
+  color: var(--color-blue);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-blue);
+}
+
+.outline:hover {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+}
+
+.secondary {
+  color: var(--color-white);
+  background-color: var(--color-grey);
+}
+
+.secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-grey);
+  box-shadow: 0px 0px 0px 1px var(--color-grey);
+}
+
+.ghost {
+  color: var(--color-grey);
+}
+
+.ghost:hover {
+  background-color: var(--color-grey-20);
+}
+
+.link {
+  color: var(--color-grey-90);
+  border-radius: 0;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--color-blue);
+}
+
+.medium {
+  font-size: var(--font-size-body);
+  padding: 0.5rem 1rem;
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
