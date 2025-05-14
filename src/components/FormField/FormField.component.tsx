@@ -19,7 +19,6 @@ const Formfield = <FormInputs extends object>(
 
   return (
     <TextField
-      data-component-name='FormField'
       className={styles.field}
       {...sharedProps}
       isDisabled={isDisabled}

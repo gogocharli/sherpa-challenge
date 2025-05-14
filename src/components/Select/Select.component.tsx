@@ -43,7 +43,6 @@ const Select = <FormInputs extends object, Items extends object = FormInputs>(
 
   return (
     <SelectPrimitive
-      data-component-name='Select'
       className={styles.select}
       {...otherProps}
       {...fieldProps}
