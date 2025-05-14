@@ -1,0 +1,119 @@
+.select {
+  --focus-outline: 2px solid var(--color-blue);
+
+  font-family: var(--font-family-text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  flex: 1 1 100%;
+}
+
+.input {
+  width: 100%;
+}
+
+.trigger {
+  all: unset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  min-width: 0;
+  /* We want this to take 100% of the available width besides the space for the chevron */
+  width: calc(100% - 24px);
+  justify-content: space-between;
+
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-grey);
+  border-bottom: 1px solid var(--color-grey);
+  border-left: 1px solid var(--color-grey);
+  border-right: 1px solid var(--color-grey);
+
+  padding: 0.75rem 0.75rem;
+  border-radius: var(--border-radius-xs);
+}
+
+.select[data-invalid] .trigger {
+  background-color: var(--color-pink-20);
+}
+
+.trigger > svg {
+  transition: transform var(--timing-fade) var(--easing-fade);
+}
+
+.trigger[data-focused] {
+  outline: var(--focus-outline);
+}
+
+.trigger[aria-expanded='true'] {
+  border-bottom-style: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.trigger[aria-expanded='true'] > svg {
+  transform: rotate(180deg);
+  margin-block-start: 0;
+}
+
+.triggerIcon {
+  flex-shrink: 0;
+  margin-block-start: 0.2rem;
+}
+
+.value {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-110);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.popover {
+  width: var(--trigger-width);
+}
+
+.popover[data-placement='top'] .items {
+  border-radius: var(--border-radius-xs) var(--border-radius-xs) 0 0;
+}
+
+.items {
+  background-color: var(--color-white);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-110);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 var(--border-radius-xs) var(--border-radius-xs);
+  border: 1px solid var(--color-grey);
+  gap: 0.25rem;
+  padding: 0.5rem;
+  overflow-y: auto;
+  max-height: inherit;
+  min-height: unset;
+  width: unset;
+}
+
+.items:focus-visible {
+  outline: none;
+}
+
+.item {
+  padding: 0.5rem 0.25rem;
+  border-radius: var(--border-radius-xs);
+  flex: 0;
+}
+
+.item[data-focused] {
+  outline: 2px solid var(--color-grey);
+}
+
+.item[data-hovered] {
+  background-color: var(--color-grey-10);
+}
+
+.item[data-selected] {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
