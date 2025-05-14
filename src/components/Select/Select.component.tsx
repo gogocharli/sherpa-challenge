@@ -63,8 +63,8 @@ const Select = <FormInputs extends object, Items extends object = FormInputs>(
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 12'
-            width={24}
-            height={24}
+            width={16}
+            height={16}
           >
             <path
               d='m1 1 11 10L23 1'

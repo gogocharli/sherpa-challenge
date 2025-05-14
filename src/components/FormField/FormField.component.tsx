@@ -10,8 +10,7 @@ import styles from './FormField.module.css';
 const Formfield = <FormInputs extends object>(
   props: InputFieldProps<FormInputs>,
 ) => {
-  const { children, description, label, optional, isDisabled, ...sharedProps } =
-    props;
+  const { children, description, label, isDisabled, ...sharedProps } = props;
 
   const {
     formState: { errors },
@@ -23,9 +22,7 @@ const Formfield = <FormInputs extends object>(
       {...sharedProps}
       isDisabled={isDisabled}
     >
-      <Label isDisabled={isDisabled}>
-        {label} {!!optional ? ' (Optional)' : ''}:
-      </Label>
+      <Label isDisabled={isDisabled}>{label}</Label>
       {description && (
         <p
           {...(isDisabled && { 'data-disabled': 'true' })}

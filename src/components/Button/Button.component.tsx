@@ -31,6 +31,8 @@ function Button({
   intent,
   size,
   asChild = false,
+  type = 'button',
+  disabled,
   ...props
 }: React.ComponentProps<'button'> &
   VariantProps<typeof buttonVariants> & {
@@ -41,7 +43,9 @@ function Button({
   return (
     <Comp
       data-slot='button'
-      className={clsx(buttonVariants({ intent, size, className }))}
+      className={clsx(buttonVariants({ intent, size, className, disabled }))}
+      type={type}
+      disabled={disabled}
       {...props}
     />
   );

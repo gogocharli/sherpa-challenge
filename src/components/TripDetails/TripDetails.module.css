@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 500px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form__buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-block-start: 0.5rem;
+}
+
+.descriptionWrapper {
+  gap: 1rem;
+}
+
+.descriptionList,
+.descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptionList__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.descriptionListItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: 1rem;
+
+  border-bottom: 1px solid var(--color-grey-20);
+
+  & dd {
+    font-weight: 700;
+  }
+}
+
+.fillSpace {
+  flex: 1 1 50%;
+}

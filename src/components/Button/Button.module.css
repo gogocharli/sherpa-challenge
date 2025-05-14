@@ -8,7 +8,6 @@
   background: none;
   transition: background-color var(--timing-fade) var(--easing-fade),
     color var(--timing-fade) var(--easing-fade);
-  max-width: fit-content;
 }
 
 .primary {
@@ -62,10 +61,16 @@
 
 .medium {
   font-size: var(--font-size-body);
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .disabled {
   cursor: not-allowed;
   opacity: 0.5;
+  transition: none;
+}
+
+.disabled:hover {
+  background-color: var(--color-grey);
+  color: var(--color-white);
 }
