@@ -86,23 +86,29 @@ const TripDetails = ({ title }: TripDetailsProps) => {
               type='text'
               label='Accomodation'
               description='Describe your principal place of stay in the country'
+              autoComplete='off'
             />
             <Input<TripInfoForm>
               name='givenNames'
               type='text'
               label='Given Names'
+              autoComplete='given-name'
+              autoCorrect='false'
             />
             <Input<TripInfoForm>
               name='surname'
               type='text'
               label='Surname'
               description='Your surname or family name'
+              autoComplete='family-name'
+              autoCorrect='false'
             />
             <Input<TripInfoForm>
               name='passportNumber'
               type='text'
               label='Passport Number'
               autoComplete='false'
+              autoCorrect='false'
             />
             <Input<TripInfoForm>
               name='passportExpirationDate'
