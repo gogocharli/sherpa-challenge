@@ -229,7 +229,9 @@ function DescriptionList({
       <dl className={styles.descriptionList}>
         <DescriptionListItem
           title='Arrival Date'
-          description={currentTimeFormat.format(new Date(data.arrivalDate))}
+          description={currentTimeFormat.format(
+            new Date(data.arrivalDate + 'T00:00:00'),
+          )}
         />
         <DescriptionListItem title='Purpose' description={data.purpose} />
         <DescriptionListItem
@@ -249,13 +251,15 @@ function DescriptionList({
         <DescriptionListItem
           title='Passport Expiration Date'
           description={currentTimeFormat.format(
-            new Date(data.passportExpirationDate),
+            new Date(data.passportExpirationDate + 'T00:00:00'),
           )}
           isDescriptionHidden={!showSensitiveInfo}
         />
         <DescriptionListItem
           title='Date of Birth'
-          description={currentTimeFormat.format(new Date(data.birthDate))}
+          description={currentTimeFormat.format(
+            new Date(data.birthDate + 'T00:00:00'),
+          )}
           isDescriptionHidden={!showSensitiveInfo}
         />
       </dl>
