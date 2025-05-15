@@ -4,29 +4,14 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { toast } from 'sonner';
-import { z } from 'zod';
 
 import { updateTripInfo, useTripInfo } from '@/lib/api';
+import { TripInfoForm, tripInfoSchema } from '@/lib/validation';
 import { Input } from '../Input';
 import { Select, SelectItem } from '../Select';
 import { Button } from '../Button';
 
 import styles from './TripDetails.module.css';
-
-const stringSchema = z.string().trim().min(1, 'Required');
-
-const tripInfoSchema = z.object({
-  arrivalDate: z.string().date(),
-  purpose: stringSchema,
-  accomodation: stringSchema,
-  passportNumber: stringSchema,
-  passportExpirationDate: z.string().date(),
-  givenNames: stringSchema,
-  surname: stringSchema,
-  birthDate: z.string().date(),
-});
-
-type TripInfoForm = z.infer<typeof tripInfoSchema>;
 
 interface TripDetailsProps {
   title: React.ReactNode;
